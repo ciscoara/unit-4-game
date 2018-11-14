@@ -1,5 +1,27 @@
 *
 {
     background-image: url(/assets/images/background3.jpg);
+    font-family: "myFont";
+    
+}   
+
+@font-face {
+    font-family: "myFont";
+    src: url(/assets/sf_fedora/SFFedoraTitlesItalic.ttf);
+}
+
+h1 {
+    font-family: "myFont";
+    text-align: center;
+    color: rgb(240, 188, 16);
+    font-size: 60px;
+    
+}
+
+.rules {
+    font-size: 20px;
+    color: white;
+    width: 400px;
+    height: 500px;
 
 }
