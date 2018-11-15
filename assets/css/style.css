@@ -37,12 +37,12 @@ h1 {
 
 .crystals {
     display: flex;
+    float: right;
     justify-content: space-between;
-    background-color: white;
+
 }
-.crystal {
-    image-rendering: auto;
+
+img{
+    width: 150px;
     height: 150px;
-    widows: 150px;
-    background: green;
 }
