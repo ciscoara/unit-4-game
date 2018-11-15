@@ -34,3 +34,15 @@ h1 {
     color: yellowgreen;
     float: right;
 }
+
+.crystals {
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+}
+.crystal {
+    image-rendering: auto;
+    height: 150px;
+    widows: 150px;
+    background: green;
+}
