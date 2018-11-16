@@ -16,3 +16,7 @@ for (var i = 0; i < 4; i++) {
     var crystals = $("<div>");
     $(".crystals").append(crystals);
 }
+
+function (){
+    
+}

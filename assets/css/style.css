@@ -11,7 +11,7 @@
 
 @font-face {
     font-family: "myFont";
-    src: url(/assets/sf_fedora/SFFedoraTitlesItalic.ttf);
+    src: url(/assets/sf_fedora/SFFedora.ttf);
 }
 
 h1 {
@@ -21,29 +21,35 @@ h1 {
     font-size: 60px;
     
 }
-
+.collector{
+    max-width:960px ;
+}
 .rules {
     font-size: 20px;
-    color: yellow;
+    color: greenyellow;
     width: 300px;
     margin: 0%;
-
+    float: right;
 
 }
 .scoreboard {
     font-size: 20px;
-    color: yellowgreen;
-    float: right;
+    color: rgb(170, 230, 50);
+    float: left;
+    background-color: white;
 }
 
 .crystals {
     display: flex;
-    float: right;
+    float: left;
     justify-content: space-between;
 
 }
+/* *{
+    clear: both;
+} */
 
 img{
-    width: 150px;
-    height: 150px;
+    width: 100px;
+    height: 100px;
 }
