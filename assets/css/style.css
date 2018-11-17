@@ -36,7 +36,10 @@ h1 {
     font-size: 20px;
     color: rgb(170, 230, 50);
     float: left;
-    background-color: white;
+    background: black;
+    height: 150PX;
+    width: 150px;
+
 }
 
 .crystals {
@@ -45,9 +48,6 @@ h1 {
     justify-content: space-between;
 
 }
-/* *{
-    clear: both;
-} */
 
 img{
     width: 100px;
