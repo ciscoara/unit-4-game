@@ -1,9 +1,9 @@
 //global values
-let wins;
-let loses;
+let wins = 0;
+let losses = 0;
 let points = 0;
-let gems = 0;
-let start = false;
+let target = 0;
+let startGame = false;
 
 //cristalitos
 let crystalOne = {value : 0};
@@ -23,7 +23,7 @@ function values (min, max) {
 };
 
 // random number limits
-randomNum = values (19, 120);
+target = values (19, 120);
 
 
 //crystal values
@@ -42,61 +42,106 @@ crystalOne.value = values (1, 12);
 crystalTwo.value = values (1, 12);
 crystalThree.value = values (1, 12);
 crystalFour.value = values (1, 12);
-} 
+};
 
 
 $(document).ready(function() {
-    values();
-    $('#number').html(randomNum);
+    console.log(values());
+    startGame = true;
     diffValue ();
-
+    $('#number').html(target);
+    $('#wins').html(wins);
+    $('#losses').html(losses);
 }
 );
+function clear() {
+    $("#score").empty();
+    $("#number").empty();
+    $('startGame').empty();
+  };
+
+  // Function for resetting colors and setting new colors.
+  function reset() {
+    clear();
+  };
+
+
 
 $("#crystal1").on("click", function () {
-
+        if (startGame === true){
         points += crystalOne.value;
-        console.log(crystalOne);
+        console.log("1-" + crystalOne.value);
         $('#score').html(points);
-    }
-);
+        if  (target === points) {
+            alert("Nice job! YOU win");
+            wins++;
+            $("#wins").html(wins);
+            reset ();
+        }
+        else if (target < points) {
+            alert("Awww man! You are NOT a winner");
+            losses++;
+            $("#losses").html(losses);
+            reset ();
+    };
+}
+});
+
 $("#crystal2").on("click", function () {
-
+    if (startGame === true){
     points += crystalTwo.value;
-    console.log(crystalTwo);
+    console.log("2-" + crystalTwo.value);
     $('#score').html(points);
-}
-);
-$("#crystal3").on("click", function () {
-
-    points += crystalThree.value;
-    console.log(crystalThree);
-    $('#score').html(points);
-}
-);
-$("#crystal4").on("click", function () {
-
-    points += crystalFour.value;
-    console.log(crystalFour);
-    $('#score').html(points);
-}
-);
-function reset () {
-    points ();
-    randomNum ();
-}
-
-function score() {
-    if  ( randomNum === points) {
+    if  (target === points) {
         alert("Nice job! YOU win");
         wins++;
         $("#wins").html(wins);
         reset ();
     }
-    else if (randomNum < points) {
+    else if (target < points) {
         alert("Awww man! You are NOT a winner");
-        loses++;
-        $("#loses").html(loses);
+        losses++;
+        $("#losses").html(losses);
+        reset ();
+
+    };
+}
+});
+$("#crystal3").on("click", function () {
+    if (startGame === true){
+    points += crystalThree.value;
+    console.log("3-" + crystalThree.value);
+    $('#score').html(points);
+    if  (target === points) {
+        alert("Nice job! YOU win");
+        wins++;
+        $("#wins").html(wins);
         reset ();
     }
-};
+    else if (target < points) {
+        alert("Awww man! You are NOT a winner");
+        losses++;
+        $("#losses").html(losses);
+        reset ();
+    };
+}
+});
+$("#crystal4").on("click", function () {
+    if (startGame === true){
+    points += crystalFour.value;
+    console.log("4-" + crystalFour.value);
+    $('#score').html(points);
+    if  (target === points) {
+        alert("Nice job! YOU win");
+        wins++;
+        $("#wins").html(wins);
+        reset ();
+    }
+    else if (target < points) {
+        alert("Awww man! You are NOT a winner");
+        losses++;
+        $("#losses").html(losses);
+        reset ();
+    };
+}
+});
