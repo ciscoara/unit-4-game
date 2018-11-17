@@ -14,15 +14,16 @@
     src: url(/assets/sf_fedora/SFFedora.ttf);
 }
 
-h1 {
+#main {
     font-family: "myFont";
     text-align: center;
-    color: whitesmoke;
-    font-size: 60px;
+    color: white;
+    font-size: 90px;
+    text-align: center;
     
 }
 .collector{
-    max-width:960px ;
+    max-width:900px ;
 }
 .rules {
     font-size: 20px;
@@ -32,19 +33,33 @@ h1 {
     float: right;
 
 }
+.totalscore{
+
+    color: #e4ffe9fd;
+}
+#score {
+    color: yellowgreen;
+}
+.randomNumber {
+    color: yellowgreen;
+}
+#number {
+    color: #e4ffe9fd;
+}
 .scoreboard {
-    font-size: 20px;
-    color: rgb(170, 230, 50);
+    color: yellow;
     float: left;
-    height: 150PX;
-    width: 200px;
+    width: 600px;
+    font-size: 50px;
+    background-color: beige;
 
 }
 
+}
 .crystals {
     display: flex;
-    float: left;
     justify-content: space-between;
+    float: left;
 
 }
 
