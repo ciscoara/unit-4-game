@@ -22,8 +22,8 @@ function values (min, max) {
     return Math.floor(Math.random()* (max -  min + 1) + min);
 };
 
-// random number limits
-target = values (19, 120);
+// random number limits, drop the max
+target = values (19, 90);
 
 
 //crystal values
@@ -46,7 +46,7 @@ crystalFour.value = values (1, 12);
 
 
 $(document).ready(function() {
-    console.log(values());
+    console.log(diffValue());
     startGame = true;
     diffValue ();
     $('#number').html(target);
@@ -55,15 +55,19 @@ $(document).ready(function() {
 }
 );
 function clear() {
+    points = 0;
     $("#score").empty();
-    $("#number").empty();
+    $("#number").html(values);
     $('startGame').empty();
+    diffValue ();
+
   };
 
   // Function for resetting colors and setting new colors.
-  function reset() {
-    clear();
-  };
+//   function reset() {
+//     clear();
+//   };
+//I had problems resetting
 
 
 
@@ -73,16 +77,16 @@ $("#crystal1").on("click", function () {
         console.log("1-" + crystalOne.value);
         $('#score').html(points);
         if  (target === points) {
-            alert("Nice job! YOU win");
+            alert("Nice job! YOU win Mr. Jones");
             wins++;
             $("#wins").html(wins);
-            reset ();
+            clear ();
         }
         else if (target < points) {
             alert("Awww man! You are NOT a winner");
             losses++;
             $("#losses").html(losses);
-            reset ();
+            clear ();
     };
 }
 });
@@ -93,16 +97,16 @@ $("#crystal2").on("click", function () {
     console.log("2-" + crystalTwo.value);
     $('#score').html(points);
     if  (target === points) {
-        alert("Nice job! YOU win");
+        alert("Nice job! YOU win Mr. Jones");
         wins++;
         $("#wins").html(wins);
-        reset ();
+        clear ();
     }
     else if (target < points) {
         alert("Awww man! You are NOT a winner");
         losses++;
         $("#losses").html(losses);
-        reset ();
+        clear ();
 
     };
 }
@@ -113,16 +117,16 @@ $("#crystal3").on("click", function () {
     console.log("3-" + crystalThree.value);
     $('#score').html(points);
     if  (target === points) {
-        alert("Nice job! YOU win");
+        alert("Nice job! YOU win Mr. Jones");
         wins++;
         $("#wins").html(wins);
-        reset ();
+        clear ();
     }
     else if (target < points) {
         alert("Awww man! You are NOT a winner");
         losses++;
         $("#losses").html(losses);
-        reset ();
+        clear ();
     };
 }
 });
@@ -132,16 +136,16 @@ $("#crystal4").on("click", function () {
     console.log("4-" + crystalFour.value);
     $('#score').html(points);
     if  (target === points) {
-        alert("Nice job! YOU win");
+        alert("Nice job! YOU win Mr. Jones");
         wins++;
         $("#wins").html(wins);
-        reset ();
+        clear ();
     }
     else if (target < points) {
         alert("Awww man! You are NOT a winner");
         losses++;
         $("#losses").html(losses);
-        reset ();
+        clear ();
     };
 }
 });
