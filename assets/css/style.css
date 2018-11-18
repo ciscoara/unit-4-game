@@ -64,7 +64,6 @@
 .crystals {
     display: flex;
     float: left;
-    position: absolute;
     width: 500px;
 
 }
