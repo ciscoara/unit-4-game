@@ -23,7 +23,7 @@ function values (min, max) {
 };
 
 // random number limits, drop the max
-target = values (19, 90);
+target = values (19, 120);
 
 
 //crystal values
