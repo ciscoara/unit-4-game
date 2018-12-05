@@ -1,6 +1,6 @@
 *
 {
-    background: url(/assets/images/Petra-Jordan-4.jpg) no-repeat center center fixed;
+    background: url(../images/Petra-Jordan-4.jpg) no-repeat center center fixed;
     -moz-background-size: cover;
     -webkit-background-size: cover;
     -o-background-size: cover;
@@ -11,7 +11,7 @@
 
 @font-face {
     font-family: "myFont";
-    src: url(/assets/sf_fedora/SFFedora.ttf);
+    src: url("../sf_fedora/SFFedora.ttf");
 }
 
 #main {
